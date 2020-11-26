@@ -33,14 +33,15 @@ const ScrollToTop = () => {
           i {
             padding: 15px;
             border-radius: 10px;
-            border: 1px solid black;
             position: fixed;
             top: 50%;
             right: 30px;
+            background-color: lightgray;
           }
 
           i:hover {
             cursor: pointer;
+            background-color: #c0c0c0;
           }
         `}
       </style>
