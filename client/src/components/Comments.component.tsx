@@ -1,5 +1,6 @@
 import { IComment } from '../interfaces/news.interface';
 import Comment from './Comment.component';
+import { CommentsStyles } from '../styles/Comments.styles';
 
 interface IProps {
   comments: IComment[];
@@ -12,13 +13,7 @@ const Comments = ({ comments }: IProps) => {
         <Comment key={comment.id} comment={comment} />
       ))}
 
-      <style jsx>
-        {`
-          .comments {
-            margin-left: 10px;
-          }
-        `}
-      </style>
+      <style jsx>{CommentsStyles}</style>
     </div>
   );
 };

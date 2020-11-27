@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { ScrollToTopStyles } from '../styles/ScrollToTop.styles';
 
 const ScrollToTop = () => {
   const [show, setShow] = useState<boolean>(false);
@@ -28,23 +29,7 @@ const ScrollToTop = () => {
   return (
     <div>
       {show && <i className='fas fa-arrow-up' onClick={goToTop}></i>}
-      <style jsx>
-        {`
-          i {
-            padding: 15px;
-            border-radius: 10px;
-            position: fixed;
-            top: 50%;
-            right: 30px;
-            background-color: lightgray;
-          }
-
-          i:hover {
-            cursor: pointer;
-            background-color: #c0c0c0;
-          }
-        `}
-      </style>
+      <style jsx>{ScrollToTopStyles}</style>
     </div>
   );
 };

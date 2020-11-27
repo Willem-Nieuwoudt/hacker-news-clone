@@ -13,12 +13,12 @@ export const NewsListStyles = css`
         margin: 0;
         margin-bottom: 0.5em;
 
-        .news-item-title-a {
+        a {
           color: #333;
-        }
 
-        .news-item-title-a:hover {
-          text-decoration: underline;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
 
@@ -26,16 +26,16 @@ export const NewsListStyles = css`
         font-size: 0.8rem;
         font-weight: bold;
 
-        .news-item-details-span {
+        span {
           margin-right: 1em;
         }
 
-        .news-item-details-a {
+        a {
           color: #6600ff;
-        }
 
-        .news-item-details-a:hover {
-          text-decoration: underline;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

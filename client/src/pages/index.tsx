@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout.component';
 import NewsList from '../components/NewsList.component';
 import { INews } from '../interfaces/news.interface';
+import { IndexStyles } from '../styles/Index.styles';
 
 interface IProps {
   news: INews[];
@@ -34,21 +35,7 @@ const Home = ({ news, page }: IProps) => {
         </div>
       </div>
 
-      <style jsx>
-        {`
-          .bottom-nav-btns {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-          }
-
-          .next-page-link,
-          .previous-page-link {
-            color: black;
-            font-weight: bold;
-          }
-        `}
-      </style>
+      <style jsx>{IndexStyles}</style>
     </Layout>
   );
 };

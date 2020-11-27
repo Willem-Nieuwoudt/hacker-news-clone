@@ -4,6 +4,8 @@ import sanitizeHtml from 'sanitize-html';
 import Comments from './Comments.component';
 import { Fragment, useState } from 'react';
 
+import { CommentStyles } from '../styles/Comment.styles';
+
 interface IProps {
   comment: IComment;
 }
@@ -30,33 +32,7 @@ const Comment = ({ comment: { user, content, comments } }: IProps) => {
 
       {showReplies && <Comments comments={comments} />}
 
-      <style jsx>
-        {`
-          .comment {
-            border-left: 2px solid gray;
-            padding-left: 5px;
-            margin-bottom: 20px;
-          }
-
-          .comment-user {
-            margin: 10px;
-          }
-
-          .comment-content {
-            white-space: pre wrap;
-            overflow: auto;
-            word-wrap: break-word;
-            font-size: 0.9rem;
-          }
-
-          span {
-            color: blue;
-            padding-top: 10px;
-            cursor: pointer;
-            font-size: 0.8rem;
-          }
-        `}
-      </style>
+      <style jsx>{CommentStyles}</style>
     </div>
   );
 };

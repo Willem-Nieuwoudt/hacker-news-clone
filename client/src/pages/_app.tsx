@@ -2,7 +2,8 @@ import '../styles/globals.css';
 import { AppProps } from 'next/app';
 import nprogress from 'nprogress';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
+import Head from 'next/head';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -37,7 +38,14 @@ const App = ({ Component, pageProps }: AppProps) => {
     };
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <Fragment>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      </Head>
+      <Component {...pageProps} />
+    </Fragment>
+  );
 };
 
 export default App;

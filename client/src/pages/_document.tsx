@@ -5,6 +5,9 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta name='description' content='A hacker news clone project built with Next.js' />
+          <meta name='keywords' content='Next.js, Sass, JavaScript, React' />
+
           <link
             rel='stylesheet'
             href='https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css'

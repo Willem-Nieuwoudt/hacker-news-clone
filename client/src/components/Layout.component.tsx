@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import ScrollToTop from './ScrollToTop.component';
 import Router from 'next/router';
+import { LayoutStyles } from '../styles/Layout.styles';
 
 interface IProps {
   children: React.ReactNode;
@@ -15,6 +16,7 @@ const Layout = ({ children, tabTitle, includeBackBtn }: IProps) => {
       <Head>
         <title>{tabTitle}</title>
       </Head>
+
       <nav>
         {includeBackBtn && (
           <span className='back-btn' onClick={() => Router.back()}>
@@ -27,43 +29,13 @@ const Layout = ({ children, tabTitle, includeBackBtn }: IProps) => {
           </a>
         </Link>
       </nav>
+
       <div className='page-content'>
         {children}
         <ScrollToTop />
       </div>
-      <style jsx>
-        {`
-          .layout {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #f6f6ef;
-          }
 
-          nav {
-            background: #f60;
-            padding: 1em;
-          }
-
-          nav > * {
-            display: inline-block;
-            color: black;
-          }
-
-          .main-title {
-            font-weight: bold;
-          }
-
-          .back-btn {
-            font-size: 0.9rem;
-            padding-right: 1em;
-            cursor: pointer;
-          }
-
-          .page-content {
-            padding: 15px;
-          }
-        `}
-      </style>
+      <style jsx>{LayoutStyles}</style>
     </div>
   );
 };
